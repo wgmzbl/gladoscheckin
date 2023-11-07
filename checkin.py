@@ -13,9 +13,9 @@ cookie = os.environ["COOKIE"]
 
 def start():
     
-    url= "https://glados.rocks/api/user/checkin"
-    url2= "https://glados.rocks/api/user/status"
-    referer = 'https://glados.rocks/console/checkin'
+    url= "https://glados.space/api/user/checkin"
+    url2= "https://glados.space/api/user/status"
+    referer = 'https://glados.space/console/checkin'
     body={"token":"glados.one"}
     checkin = requests.post(url,headers={'cookie': cookie ,'referer': referer, "content-type": "application/json" }, data=json.dumps(body))
     state =  requests.get(url2,headers={'cookie': cookie ,'referer': referer})
